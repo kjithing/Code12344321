@@ -1,14 +1,18 @@
 #include <stdio.h>
 int main() {
-    int num;
-    printf("Enter an integer: ");
-    scanf("%d", &num);
+    int dividend, divisor, quotient, remainder;
+    printf("Enter dividend: ");
+    scanf("%d", &dividend);
+    printf("Enter divisor: ");
+    scanf("%d", &divisor);
 
-    // true if num is perfectly divisible by 2
-    if(num % 2 == 0)
-        printf("%d is even.", num);
-    else
-        printf("%d is odd.", num);
-    
+    // Computes quotient
+    quotient = dividend / divisor;
+
+    // Computes remainder
+    remainder = dividend % divisor;
+
+    printf("Quotient = %d\n", quotient);
+    printf("Remainder = %d", remainder);
     return 0;
 }
