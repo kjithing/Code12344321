@@ -1,16 +1,22 @@
-#include <stdio.h>
+#include<stdio.h>
 int main() {
-    int a;
-    long b;   // equivalent to long int b;
-    long long c;  // equivalent to long long int c;
-    double e;
-    long double f;
+  double first, second, temp;
+  printf("Enter first number: ");
+  scanf("%lf", &first);
+  printf("Enter second number: ");
+  scanf("%lf", &second);
 
-    printf("Size of int = %zu bytes \n", sizeof(a));
-    printf("Size of long int = %zu bytes\n", sizeof(b));
-    printf("Size of long long int = %zu bytes\n", sizeof(c));
-    printf("Size of double = %zu bytes\n", sizeof(e));
-    printf("Size of long double = %zu bytes\n", sizeof(f));
-    
-    return 0;
+  // value of first is assigned to temp
+  temp = first;
+
+  // value of second is assigned to first
+  first = second;
+
+  // value of temp (initial value of first) is assigned to second
+  second = temp;
+
+  // %.2lf displays number up to 2 decimal points
+  printf("\nAfter swapping, first number = %.2lf\n", first);
+  printf("After swapping, second number = %.2lf", second);
+  return 0;
 }
