@@ -1,14 +1,12 @@
 #include <stdio.h>
-int main() {    
-
-    int number1, number2, sum;
+int main() {  
+    char c;
+    printf("Enter a character: ");
+    scanf("%c", &c);  
     
-    printf("Enter two integers: ");
-    scanf("%d %d", &number1, &number2);
-
-    // calculating sum
-    sum = number1 + number2;      
+    // %d displays the integer value of a character
+    // %c displays the actual character
+    printf("ASCII value of %c = %d", c, c);
     
-    printf("%d + %d = %d", number1, number2, sum);
     return 0;
 }
