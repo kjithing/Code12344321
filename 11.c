@@ -1,22 +1,20 @@
-#include<stdio.h>
+#include <stdio.h>
 int main() {
-  double first, second, temp;
-  printf("Enter first number: ");
-  scanf("%lf", &first);
-  printf("Enter second number: ");
-  scanf("%lf", &second);
+    char c;
+    int lowercase_vowel, uppercase_vowel;
+    printf("Enter an alphabet: ");
+    scanf("%c", &c);
 
-  // value of first is assigned to temp
-  temp = first;
+    // evaluates to 1 if variable c is a lowercase vowel
+    lowercase_vowel = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
 
-  // value of second is assigned to first
-  first = second;
+    // evaluates to 1 if variable c is a uppercase vowel
+    uppercase_vowel = (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');
 
-  // value of temp (initial value of first) is assigned to second
-  second = temp;
-
-  // %.2lf displays number up to 2 decimal points
-  printf("\nAfter swapping, first number = %.2lf\n", first);
-  printf("After swapping, second number = %.2lf", second);
-  return 0;
+    // evaluates to 1 (true) if c is a vowel
+    if (lowercase_vowel || uppercase_vowel)
+        printf("%c is a vowel.", c);
+    else
+        printf("%c is a consonant.", c);
+    return 0;
 }
